@@ -75,3 +75,6 @@ test('Todos can be completed by the user', async () => {
   fireEvent.click(laundry)
   await screen.findByText('laundry ✔️')
 })
+test('Can submit a new todo, and shows up uncompleted', async () => {
+  // capturing the nodes of interest
+})
