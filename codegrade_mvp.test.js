@@ -37,4 +37,6 @@ test('Todo component renders uncompleted todos correctly', () => {
   expect(todo).toBeVisible()
 
   const todoNotThere = screen.queryByText('not here')
-})
+  expect(todoNotThere).toBe(null)
+  expect(todoNotThere).not.toBeInTheDocument()
+  expect(todoNotThere).not.toBeInTheDocument()
