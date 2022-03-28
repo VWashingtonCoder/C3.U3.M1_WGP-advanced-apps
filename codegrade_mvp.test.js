@@ -107,5 +107,5 @@ test('click handler gets clickes', () => {
     todo={{ id: 'xyz', name: 'doit', completed: false }}
     toggleStatus={spy}
   />)
-  screen.click()
+  screen.click(screen.getByText('doit', { exact: false }))
 })
