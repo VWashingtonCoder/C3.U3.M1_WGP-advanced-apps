@@ -1,4 +1,5 @@
 import React from 'react'
+import { v4 } from 'uuid'
 
 export default function Todo(props) {
   const { todo, toggleStatus } = props
@@ -8,7 +9,7 @@ export default function Todo(props) {
       onClick={() => toggleStatus(todo.id)}
       className="todo"
     >
-      {todo.name}{todo.completed ? ` ✔️` : ''}
+      {todo.name}{todo.completed ? ` ✔️` : ''} {v4()}
     </div>
   )
 }
