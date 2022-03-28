@@ -49,7 +49,7 @@ test('Todo component renders completed todos correctly', () => {
       toggleStatus={Function.prototype}
     />
   )
-  screen.debug()
+  // if you want to make the search text more lenient (capitalization, length...)
   const todoCheck = screen.queryByText('✔️', { exact: false })
   expect(todoCheck).toBeInTheDocument()
 })
