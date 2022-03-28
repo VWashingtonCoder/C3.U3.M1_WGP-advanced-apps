@@ -77,5 +77,5 @@ test('Todos can be completed by the user', async () => {
 })
 test('Can submit a new todo, and shows up uncompleted', async () => {
   // capturing the nodes of interest
-  const input = ??????
+  const input = screen.getBy()
 })
