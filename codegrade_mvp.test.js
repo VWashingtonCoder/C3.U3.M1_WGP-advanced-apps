@@ -62,10 +62,10 @@ test('Renders completeds and uncompleteds correct', () => {
     todo={{ id: 'xyz', name: 'doit', completed: false }}
     toggleStatus={Function.prototype}
   />)
-  screen.getByText(/doit/i, { exact: false })
+  screen.getByText(/doit/, { exact: false })
   rerender(<Todo
     todo={{ id: 'xyz', name: 'Do It Now', completed: true }}
     toggleStatus={Function.prototype}
   />)
-  screen.getByText(/)
+  screen.getByText(/do it now/i)
 })
