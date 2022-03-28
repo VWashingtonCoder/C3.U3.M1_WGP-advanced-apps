@@ -64,12 +64,13 @@ test('Renders completeds and uncompleteds correct', () => {
   />)
   screen.getByText(/doit/, { exact: false })
   rerender(<Todo
-    todo={{ id: 'xyz', name: 'Do    It Now', completed: true }}
+    todo={{ id: 'xyz', name: 'Do It Now', completed: true }}
     toggleStatus={Function.prototype}
   />)
   screen.getByText(/do it now/i)
 })
 test('Todos can be completed by the user', async () => {
   render(<App />)
-  await screen.findByText('laundry')
+  const laundry = await screen.findByText('laundry')
+  expect
 })
