@@ -19,5 +19,6 @@ beforeEach(() => { resetTodos() })
 
 test('App renders without crashing', async () => {
   render(<App />)
+  screen.debug()
   await screen.findByText('laundry')
 })
