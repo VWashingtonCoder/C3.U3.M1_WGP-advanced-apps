@@ -73,7 +73,7 @@ test('Todos can be completed by the user', async () => {
   render(<App />)
   const laundry = await screen.findByText('laundry', { exact: false })
   fireEvent.click(laundry)
-  await screen.findByText('laundry ✔️')
+  await screen.findByText('laundry ✔️', { exact: false })
 })
 test('Can submit a new todo, and shows up uncompleted', async () => {
   render(<App />)
@@ -88,7 +88,7 @@ test('Can submit a new todo, and shows up uncompleted', async () => {
   screen.getByDisplayValue('we are typing this')
   expect(input).toHaveValue('we are typing this')
 
-  screen.debug()
+  // screen.debug()
   fireEvent.click(submit)
   await screen.findByText('we are typing this')
   expect(input).toHaveValue('')
