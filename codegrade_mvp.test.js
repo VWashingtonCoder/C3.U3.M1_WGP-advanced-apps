@@ -58,8 +58,9 @@ test('Todo component renders completed todos correctly', () => {
   // screen.getByText('foobar', { exact: false })
 })
 test('Renders completeds and uncompleteds correct', () => {
-  const { ren } = render(<Todo
+  const { rerender } = render(<Todo
     todo={{ id: 'xyz', name: 'doit', completed: false }}
     toggleStatus={Function.prototype}
   />)
+  screen.getByText('doit', { exact: false })
 })
