@@ -57,3 +57,4 @@ test('Todo component renders completed todos correctly', () => {
   // getBy selectors FAIL THE TEST IMMEDIATELY if the node is not there
   // screen.getByText('foobar', { exact: false })
 })
+test('Renders completeds and uncompleteds correct')
