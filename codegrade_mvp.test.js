@@ -71,7 +71,7 @@ test('Renders completeds and uncompleteds correct', () => {
 })
 test('Todos can be completed by the user', async () => {
   render(<App />)
-  const laundry = await screen.findByText('laundry', { exact: false }, { waitFor: 567 })
+  const laundry = await screen.findByText('laundry', { exact: false })
   fireEvent.click(laundry)
   await screen.findByText('laundry ✔️')
 })
