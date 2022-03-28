@@ -50,6 +50,6 @@ test('Todo component renders completed todos correctly', () => {
     />
   )
   screen.debug()
-  const todoCheck =s creen.queryByText('✔️')
+  const todoCheck = screen.queryByText('test ✔️')
   expect(todoCheck).toBeInTheDocument()
 })
