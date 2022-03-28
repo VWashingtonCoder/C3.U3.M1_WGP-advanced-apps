@@ -15,7 +15,6 @@ beforeAll(() => { server.listen() })
 afterAll(() => { server.close() })
 afterEach(() => {
   server.resetHandlers()
-  render(<App />)
 })
 beforeEach(() => { resetTodos() })
 // not needed for module project, END
@@ -83,4 +82,5 @@ test('Can submit a new todo, and shows up uncompleted', async () => {
   await screen.findByText('laundry', { exact: false })
   // capturing the nodes of interest
   const input = screen.getByPlaceholderText('Type todo')
+  const submit = screen.getby
 })
