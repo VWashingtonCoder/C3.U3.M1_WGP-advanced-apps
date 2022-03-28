@@ -67,5 +67,5 @@ test('Renders completeds and uncompleteds correct', () => {
     todo={{ id: 'xyz', name: 'Do    It Now', completed: true }}
     toggleStatus={Function.prototype}
   />)
-  screen.getByText(/do it ajsfhakjlow/i)
+  screen.getByText(/do it now/i)
 })
