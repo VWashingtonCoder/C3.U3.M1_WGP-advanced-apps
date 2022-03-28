@@ -17,11 +17,7 @@ afterEach(() => { server.resetHandlers() })
 beforeEach(() => { resetTodos() })
 // not needed for module project, END
 
-test('App is NOT a class-based component', async () => {
+test('App renders without crashing', async () => {
   render(<App />)
   await screen.findByText('laundry')
-  expect(
-    App.prototype &&
-    App.prototype.isReactComponent
-  ).not.toBeTruthy()
 })
