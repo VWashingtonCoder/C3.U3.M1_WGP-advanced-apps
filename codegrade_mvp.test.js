@@ -102,9 +102,10 @@ test('Can submit a new todo, and shows up uncompleted', async () => {
   expect(input).toHaveValue('')
 })
 test('click handler gets clickes', () => {
-  const 
+  const spy = jest.fn()
   render(<Todo
     todo={{ id: 'xyz', name: 'doit', completed: false }}
-    toggleStatus={Function.prototype}
+    toggleStatus={spy}
   />)
+  screen.click()
 })
