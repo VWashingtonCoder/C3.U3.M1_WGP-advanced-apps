@@ -43,5 +43,12 @@ test('Todo component renders uncompleted todos correctly', () => {
   expect(todoNotThere).not.toBeInTheDocument()
 })
 test('Todo component renders completed todos correctly', () => {
-  
+  render(
+    <Todo
+      todo={{ id: 'abc', name: 'check test', completed: true }}
+      toggleStatus={Function.prototype}
+    />
+  )
+  const todoCheck = screen.queryByText(' :heavy_check_mark:')
+  expect(todoCheck).toBeVisible
 })
