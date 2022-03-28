@@ -28,7 +28,7 @@ export default function Form(props) {
           placeholder="Type todo"
           type="text"
         />
-        <input type="submit" disabled={!nameInput.length} />
+        <input data-testid="theSubmit" type="submit" disabled={!nameInput.length} />
       </form>
 
       <button onClick={toggleShowCompleteds}>
