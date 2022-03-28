@@ -75,4 +75,5 @@ test('Todos can be completed by the user', async () => {
   expect(laundry).toHaveTextContent('laundry')
   fireEvent.click(laundry)
   const laundryCompleted = await screen.findByText('laundry ✔️')
+  expect(laundryCompleted).toHaveTextContent('laundry')
 })
