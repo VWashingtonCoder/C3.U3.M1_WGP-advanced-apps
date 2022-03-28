@@ -69,3 +69,6 @@ test('Renders completeds and uncompleteds correct', () => {
   />)
   screen.getByText(/do it now/i)
 })
+test('Todos can be completed by the user', () => {
+  
+})
