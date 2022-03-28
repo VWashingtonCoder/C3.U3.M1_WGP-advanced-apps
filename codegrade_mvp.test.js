@@ -10,6 +10,7 @@ import Todo from './frontend/components/Todo'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 
+// we can mock ANY module
 jest.mock('uuid', () => {
   return {
     v4() {
@@ -96,7 +97,6 @@ test('Can submit a new todo, and shows up uncompleted', async () => {
   screen.getByDisplayValue('we are typing this')
   expect(input).toHaveValue('we are typing this')
 
-  screen.debug()
   fireEvent.click(submit)
   await screen.findByText('we are typing this', { exact: false })
   expect(input).toHaveValue('')
