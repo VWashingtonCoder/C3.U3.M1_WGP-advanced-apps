@@ -37,10 +37,11 @@ test('Todo component renders uncompleted todos correctly', () => {
   expect(todo).toBeVisible()
 
   // sometimes we need to check that something is NOT there
+  // the queryBy queries put a null value in the variable if the node is not there
   const todoNotThere = screen.queryByText('not here')
   expect(todoNotThere).toBe(null)
   expect(todoNotThere).not.toBeInTheDocument()
 })
 test('Todo component renders completed todos correctly', () => {
-  ????
+  
 })
