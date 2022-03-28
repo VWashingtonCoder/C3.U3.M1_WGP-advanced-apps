@@ -20,6 +20,7 @@ beforeEach(() => { resetTodos() })
 test('App renders without crashing', async () => {
   render(<App />)
   await screen.findByText('laundry')
+  // screen.debug()
 })
 test('Todo component renders uncompleted todos correctly', () => {
   render(<Todo
