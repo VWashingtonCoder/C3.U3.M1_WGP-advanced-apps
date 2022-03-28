@@ -72,5 +72,6 @@ test('Renders completeds and uncompleteds correct', () => {
 test('Todos can be completed by the user', async () => {
   render(<App />)
   const laundry = await screen.findByText('laundry')
-  expect
+  expect(laundry).toHaveTextContent('laundry')
+  
 })
