@@ -42,5 +42,5 @@ test('Todo component renders uncompleted todos correctly', () => {
   expect(todoNotThere).not.toBeInTheDocument()
 })
 test('Todo component renders completed todos correctly', () => {
-
+  ????
 })
