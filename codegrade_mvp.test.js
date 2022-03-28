@@ -87,5 +87,5 @@ test('Can submit a new todo, and shows up uncompleted', async () => {
   const submitCheating = document.querySelector('input[type=submit]')
 
   fireEvent.change(input, { target: { value: 'we are typing this' } })
-  
+  screen.getByDisplayValue('we are typing this')
 })
