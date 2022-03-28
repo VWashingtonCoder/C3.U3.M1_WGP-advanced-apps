@@ -76,6 +76,7 @@ test('Todos can be completed by the user', async () => {
   await screen.findByText('laundry ✔️')
 })
 test('Can submit a new todo, and shows up uncompleted', async () => {
+  render(<App />)
   // capturing the nodes of interest
-  const input = screen.getByPlaceholderText()
+  const input = screen.getByPlaceholderText('Type todo')
 })
