@@ -57,4 +57,9 @@ test('Todo component renders completed todos correctly', () => {
   // getBy selectors FAIL THE TEST IMMEDIATELY if the node is not there
   // screen.getByText('foobar', { exact: false })
 })
-test('Renders completeds and uncompleteds correct')
+test('Renders completeds and uncompleteds correct', () => {
+  const { ren } = render(<Todo
+    todo={{ id: 'xyz', name: 'doit', completed: false }}
+    toggleStatus={Function.prototype}
+  />)
+})
