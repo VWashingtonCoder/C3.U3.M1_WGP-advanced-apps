@@ -28,5 +28,6 @@ test('Todo component renders uncompleted todos correctly', () => {
   />)
   const todo = screen.queryByText('doit')
   const todoAnotherWay = document.querySelector('.todo')
+
   console.log(todoAnotherWay.textContent)
 })
