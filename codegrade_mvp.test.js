@@ -22,5 +22,5 @@ test('App renders without crashing', async () => {
   await screen.findByText('laundry')
 })
 test('Todo component renders uncompleted todos correctly', () => {
-  render(<Todo />)
+  render(<Todo todo={{}} toggleStatus={Function.prototype} />)
 })
