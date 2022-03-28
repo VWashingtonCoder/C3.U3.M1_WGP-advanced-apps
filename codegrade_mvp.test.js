@@ -82,6 +82,9 @@ test('Can submit a new todo, and shows up uncompleted', async () => {
   await screen.findByText('laundry', { exact: false })
   // capturing the nodes of interest
   const input = screen.getByPlaceholderText('Type todo')
+  // these are to be considered escape hatches for things that are hard to select
   const submit = screen.getByTestId('theSubmit')
   const submitCheating = document.querySelector('input[type=submit]')
+
+  fireEvent.change()
 })
