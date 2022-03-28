@@ -51,9 +51,9 @@ test('Todo component renders completed todos correctly', () => {
   )
   // if you want to make the search text more lenient (capitalization, length...)
   const todoCheck = screen.queryByText('✔️', { exact: false })
-  expect(todoCheck).toBeInTheDocument()
-  expect(todoCheck).toBeVisible()
+  expect(todoCheck).toBeInTheDocument() // assertion
+  expect(todoCheck).toBeVisible() // another assertion
 
   // getBy selectors FAIL THE TEST IMMEADETELY if the node is not there
-  screen.getByText('✔️', { exact: false })
+  screen.getByText('foobar', { exact: false })
 })
