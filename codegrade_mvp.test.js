@@ -13,9 +13,7 @@ import '@testing-library/jest-dom/extend-expect'
 // not needed for module project, START
 beforeAll(() => { server.listen() })
 afterAll(() => { server.close() })
-afterEach(() => {
-  server.resetHandlers()
-})
+afterEach(() => { server.resetHandlers() })
 beforeEach(() => { resetTodos() })
 // not needed for module project, END
 
