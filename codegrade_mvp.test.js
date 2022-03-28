@@ -10,6 +10,14 @@ import Todo from './frontend/components/Todo'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 
+jest.mock('uuid', () => {
+  return {
+    v4() {
+      return 'xyz'
+    }
+  }
+})
+
 // not needed for module project, START
 beforeAll(() => { server.listen() })
 afterAll(() => { server.close() })
