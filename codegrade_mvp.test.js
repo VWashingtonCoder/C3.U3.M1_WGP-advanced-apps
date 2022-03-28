@@ -69,6 +69,7 @@ test('Renders completeds and uncompleteds correct', () => {
   />)
   screen.getByText(/do it now/i)
 })
-test('Todos can be completed by the user', () => {
-  
+test('Todos can be completed by the user', async () => {
+  render(<App />)
+  await screen.findByText('laundry')
 })
