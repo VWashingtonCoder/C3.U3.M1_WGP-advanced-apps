@@ -108,4 +108,5 @@ test('click handler gets clickes', () => {
     toggleStatus={spy}
   />)
   fireEvent.click(screen.getByText('doit', { exact: false }))
+  expect(spy).toHaveBeenCalled()
 })
