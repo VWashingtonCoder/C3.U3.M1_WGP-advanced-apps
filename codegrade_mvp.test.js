@@ -83,4 +83,5 @@ test('Can submit a new todo, and shows up uncompleted', async () => {
   // capturing the nodes of interest
   const input = screen.getByPlaceholderText('Type todo')
   const submit = screen.getByTestId('theSubmit')
+  const submitCheating = document.querySelector('input[type=submit]')
 })
