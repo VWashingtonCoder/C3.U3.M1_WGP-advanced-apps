@@ -23,7 +23,7 @@ test('App renders without crashing', async () => {
 })
 test('Todo component renders uncompleted todos correctly', () => {
   render(<Todo
-    todo={{id: 'xyz', name:'doit', completed: false}}
+    todo={{ id: 'xyz', name: 'doit', completed: false }}
     toggleStatus={Function.prototype}
   />)
 })
