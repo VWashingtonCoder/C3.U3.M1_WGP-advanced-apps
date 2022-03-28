@@ -82,5 +82,5 @@ test('Can submit a new todo, and shows up uncompleted', async () => {
   await screen.findByText('laundry', { exact: false })
   // capturing the nodes of interest
   const input = screen.getByPlaceholderText('Type todo')
-  const submit = screen.getby
+  const submit = screen.getByLabelText('submit')
 })
