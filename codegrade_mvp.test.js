@@ -20,7 +20,7 @@ beforeEach(() => { resetTodos() })
 test('App renders without crashing', async () => {
   render(<App />)
   // findyText will retry for a while and fail the test if not found
-  await screen.findByText('laundry')
+  await screen.findByText('laundry') // only findEtc works with async/await
   // screen.debug()
 })
 test('Todo component renders uncompleted todos correctly', () => {
@@ -35,4 +35,6 @@ test('Todo component renders uncompleted todos correctly', () => {
 
   expect(todo).toBeInTheDocument()
   expect(todo).toBeVisible()
+
+  const todoNotThere = screen.queryByText('not here')
 })
