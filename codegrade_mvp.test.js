@@ -49,7 +49,7 @@ test('Todo component renders completed todos correctly', () => {
       toggleStatus={Function.prototype}
     />
   )
-  const todoCheck = screen.queryByText('✔️')
-  expect(todoCheck).toBeInTheDocument()
   screen.debug()
+  const todoCheck =s creen.queryByText('✔️')
+  expect(todoCheck).toBeInTheDocument()
 })
