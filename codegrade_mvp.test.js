@@ -7,7 +7,7 @@ import React from 'react'
 import App from './frontend/components/App'
 import Todo from './frontend/components/Todo'
 // imports from the testing libraries
-import { render, screen, fireEvent, userEvent } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 
 // not needed for module project, START
