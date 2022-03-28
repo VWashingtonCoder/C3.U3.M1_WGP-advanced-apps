@@ -20,7 +20,7 @@ beforeEach(() => { resetTodos() })
 test('App renders without crashing', async () => {
   render(<App />)
   // findyText will retry for a while and fail the test if not found
-  await screen.findByText('laundry') // only findEtc works with async/await
+  await screen.findByText('laundry', { exact: false }) // only findEtc works with async/await
   // screen.debug()
 })
 test('Todo component renders uncompleted todos correctly', () => {
@@ -28,7 +28,7 @@ test('Todo component renders uncompleted todos correctly', () => {
     todo={{ id: 'xyz', name: 'doit', completed: false }}
     toggleStatus={Function.prototype}
   />)
-  const todo = screen.queryByText('doit')
+  const todo = screen.queryByText('doit', { exact: false })
 
   // NOOOOO! WE SHOULD ONLY QUERY BY THINGS THE USER CAN READ
   const todoAnotherWay = document.querySelector('.todo')
@@ -38,7 +38,7 @@ test('Todo component renders uncompleted todos correctly', () => {
 
   // sometimes we need to check that something is NOT there
   // the queryBy queries put a null value in the variable if the node is not there
-  const todoNotThere = screen.queryByText('not here')
+  const todoNotThere = screen.queryByText('not here', { exact: false })
   expect(todoNotThere).toBe(null)
   expect(todoNotThere).not.toBeInTheDocument()
 })
@@ -90,6 +90,6 @@ test('Can submit a new todo, and shows up uncompleted', async () => {
 
   // screen.debug()
   fireEvent.click(submit)
-  await screen.findByText('we are typing this')
+  await screen.findByText('we are typing this', { exact: false })
   expect(input).toHaveValue('')
 })
