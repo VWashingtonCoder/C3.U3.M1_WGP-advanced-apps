@@ -19,6 +19,7 @@ beforeEach(() => { resetTodos() })
 
 test('App renders without crashing', async () => {
   render(<App />)
+  // findyText will retry for a while and fail the test if not found
   await screen.findByText('laundry')
   // screen.debug()
 })
