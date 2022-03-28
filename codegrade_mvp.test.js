@@ -27,5 +27,5 @@ test('Todo component renders uncompleted todos correctly', () => {
     toggleStatus={Function.prototype}
   />)
 
-  screen.debug()
+  const todo = screen.queryByText('doit')
 })
