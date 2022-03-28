@@ -101,3 +101,10 @@ test('Can submit a new todo, and shows up uncompleted', async () => {
   await screen.findByText('we are typing this', { exact: false })
   expect(input).toHaveValue('')
 })
+test('click handler gets clickes', () => {
+  const 
+  render(<Todo
+    todo={{ id: 'xyz', name: 'doit', completed: false }}
+    toggleStatus={Function.prototype}
+  />)
+})
