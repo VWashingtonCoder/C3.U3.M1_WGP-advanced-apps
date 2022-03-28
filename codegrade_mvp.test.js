@@ -55,5 +55,5 @@ test('Todo component renders completed todos correctly', () => {
   expect(todoCheck).toBeVisible() // another assertion
 
   // getBy selectors FAIL THE TEST IMMEDIATELY if the node is not there
-  screen.getByText('foobar', { exact: false })
+  // screen.getByText('foobar', { exact: false })
 })
