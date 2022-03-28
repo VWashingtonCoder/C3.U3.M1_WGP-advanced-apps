@@ -2,7 +2,7 @@
 import server from './backend/mock-server'
 import { resetTodos } from './backend/helpers'
 
-// we are going use JSX so we need 
+// we are going use JSX so we need React
 import React from 'react'
 // components to test
 import App from './frontend/components/App'
