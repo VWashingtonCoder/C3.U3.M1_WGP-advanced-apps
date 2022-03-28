@@ -27,9 +27,10 @@ test('Todo component renders uncompleted todos correctly', () => {
     toggleStatus={Function.prototype}
   />)
   const todo = screen.queryByText('doit')
+
+  // NOOOOO! WE SHOULD ONLY QUERY BY THINGS THE USER CAN READ
   const todoAnotherWay = document.querySelector('.todo')
 
   expect(todo).toBeInTheDocument()
   expect(todo).toBeVisible()
-  console.log(todoAnotherWay.textContent)
 })
