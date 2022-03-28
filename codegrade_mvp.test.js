@@ -88,5 +88,6 @@ test('Can submit a new todo, and shows up uncompleted', async () => {
 
   fireEvent.change(input, { target: { value: 'we are typing this' } })
   screen.getByDisplayValue('we are typing this')
-  screen.debug()
+
+  fireEvent.click(submit)
 })
