@@ -1,4 +1,8 @@
+// mock server imports
 import server from './backend/mock-server'
+import { resetTodos } from './backend/helpers'
+
+// we are going use JSX so we need 
 import React from 'react'
 // components to test
 import App from './frontend/components/App'
@@ -6,7 +10,6 @@ import Todo from './frontend/components/Todo'
 
 // imports from the testing libraries
 import { render, screen, fireEvent } from '@testing-library/react'
-import { resetTodos } from './backend/helpers'
 import '@testing-library/jest-dom/extend-expect'
 
 // not needed for module project, START
